@@ -22,9 +22,11 @@ const bree = new Bree({
 
 bree.start();
 
+
 app.get('/', (req, res) => {
-  const name = process.env.NAME || 'World';
-  res.send(`Hello ${name}!`);
+ 
+  res.status(200).send('Welcome to the Wakeup Server!');
+  
 });
 
 const port = parseInt(process.env.PORT || '3000');
