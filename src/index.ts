@@ -29,6 +29,12 @@ app.get('/', (req, res) => {
   
 });
 
+
+app.get('/alive-status', (req, res) => {
+  res.status(200).send("I'm alive!");
+  
+});
+
 const port = parseInt(process.env.PORT || '3000');
 app.listen(port, () => {
   console.log(`listening on port ${port}`);
